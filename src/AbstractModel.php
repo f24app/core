@@ -156,7 +156,7 @@ abstract class AbstractModel implements ModelInterface, MagicModelInterface
         foreach( $array as $key => $value ) {
             $this->properties[$key] = $value;
         }
-        return $model;
+        return $this->properties;
     }
     
     public function __clone()

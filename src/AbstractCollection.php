@@ -10,17 +10,17 @@ abstract class AbstractCollection implements \Countable, \IteratorAggregate
         $this->objects[] = $object;
     }
 
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         return new \ArrayIterator($this->objects);
     }
 
-    public function count()
+    public function count(): int 
     {
         return count($this->objects);
     }
 
-    public function pop()
+    public function pop(): mixed
     {
         return $this->objects[count($this->objects)-1];
     }
